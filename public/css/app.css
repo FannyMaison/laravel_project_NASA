@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -160,11 +162,83 @@ table {
   src: url(/fonts/SourceSansPro-Light.ttf?e7daa4ab63e5209eedac1adcb98a7fed);
 }
 
+/*section:nth-of-type(2)
+{
+	z-index : 10; //permet de positionner le bloc au-dessus de TOUS les éléments
+	transform : translateX(+100%); //permet de cacher le bloc à droite de la fin de page
+	transition : transform 2s ease; //indque le temps de la fonction
+	position: absolute;
+
+	div p:first-of-type
+		{
+			font-family: SourceSansPro Black;
+			font-size: 2.5em;
+		}
+	div p:nth-of-type(2)
+		{
+			font-family: SourceSansPro Regular;
+			font-size: 1em;
+			height: 710px;
+			width: 686px;
+		}
+}
+
+section:nth-of-type(2).active
+{
+	transform : translateX(0%);
+}*/
+
+section#second_section {
+  z-index: 10;
+  /*permet de positionner le bloc au-dessus de TOUS les éléments*/
+  transform: translateX(1600px);
+  transition: transform 2s ease;
+  /*indque le temps de la fonction*/
+  position: absolute;
+}
+
+section#second_section div p:first-of-type {
+  font-family: SourceSansPro Black;
+  font-size: 2.5em;
+}
+
+section#second_section div p:nth-of-type(2) {
+  font-family: SourceSansPro Regular;
+  font-size: 1em;
+  height: 710px;
+  width: 686px;
+}
+
+section#second_section.active {
+  transform: translateX(92px);
+}
+
 body {
   background: #DEDEDE;
   color: #212121;
   font-family: SourceSansPro Regular;
   position: relative;
+}
+
+body header {
+  display: flex;
+}
+
+body header img:first-of-type {
+  width: 7%;
+  margin: 10px 0 30px 10px;
+}
+
+body header nav {
+  display: flex;
+  margin: 3% 0 0 10%;
+  height: 10%;
+  font-family: SourceSansPro Semibold;
+  font-size: 1.5em;
+}
+
+body nav p {
+  margin: 0 75% 0 75%;
 }
 
 body div:first-of-type .blue_circle {
@@ -179,23 +253,13 @@ body div:first-of-type .blue_circle {
   z-index: -1;
 }
 
-body img:first-of-type {
-  width: 7%;
-  margin: 10px 0 30px 10px;
-}
-
-body nav {
-  display: flex;
-  margin: -7% 50% 0 50%;
-}
-
 body div:first-of-type .content {
   border-radius: 45px;
   background-color: #F5FFFF;
   width: 1400px;
   height: 615px;
   opacity: 0.99;
-  margin: 2% auto;
+  margin: 0% auto;
   display: flex;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
@@ -213,7 +277,7 @@ body div:first-of-type .content div:first-of-type .detail {
   margin: 1% 10% 0%;
 }
 
-body div:first-of-type .content div:first-of-type .button {
+body div:first-of-type .content div:first-of-type .more_button {
   background-image: linear-gradient(left, #6B14EF, #8347B8);
   background: linear-gradient(to right, #6B14EF, #834788);
   border-radius: 55px;

@@ -1,0 +1,88 @@
+body 
+{
+	background: $light_grey;
+	color: $light_black;
+	font-family: SourceSansPro Regular;
+	position: relative;
+	header
+	{
+		display: flex;
+		img:first-of-type
+		{
+			width: 7%;
+			margin: 10px 0 30px 10px;
+		}
+	}
+	header nav
+	{
+		display:flex;
+		margin: 3% 0 0 10%;
+		height: 10%;
+		font-family: SourceSansPro Semibold;
+		font-size: 1.5em;
+	}
+	nav p
+	{
+		margin: 0 75% 0 75%;
+	}
+	
+	div:first-of-type 
+	{
+		.blue_circle
+		{
+			background: $light_blue;
+			border-radius: 50%;
+			width: 800px;
+			height: 800px;
+			overflow-x: hidden;
+			position: absolute;
+			top: -5%;
+			left: -20%;
+			z-index: -1;
+		}
+
+		.content
+		{
+			border-radius: 45px;
+			background-color: $gray_blue;
+			width: 1400px;
+			height: 615px;
+			opacity: 0.99;
+			margin: 0% auto;
+			display: flex;
+			box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+			div:first-of-type p:first-of-type
+			{
+				font-family: SourceSansPro Bold;
+				font-size: 4em;
+				margin: 15% 18% 5% 10%;
+			}
+			div:first-of-type .detail
+			{
+				color: $purple;
+				font-family: SourceSansPro Semibold;
+				font-size: 2em;
+				margin: 1% 10% 0%;
+			}
+			div:first-of-type .more_button
+			{
+				background-image: linear-gradient(left, $blue_purple, $purple);
+				background: linear-gradient(to right, #6B14EF, #834788);
+				border-radius: 55px;
+				width: 200px;
+				height: 60px;
+				color: $beige;
+				font-family: SourceSansPro Semibold;
+				border: none;
+				font-size: 2em;
+				margin: 5% 30%;
+				box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+			}
+			div:nth-of-type(2) p
+			{
+				font-family: SourceSansPro Black;
+				font-size: 2.5em;
+			}
+		}
+	}
+}
