@@ -1,0 +1,234 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  /*line-height: 1;*/
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: SourceSansPro Black;
+  src: url(/fonts/SourceSansPro-Black.ttf?4a31d5fa14f4c251809e7bcd6f954aea);
+}
+
+@font-face {
+  font-family: SourceSansPro Bold;
+  src: url(/fonts/SourceSansPro-Bold.ttf?cd9e6b790a20bbaf25ec0027060f6c3c);
+}
+
+@font-face {
+  font-family: SourceSansPro Semibold;
+  src: url(/fonts/SourceSansPro-Semibold.ttf?e8db8af2e317210f62cc1dd6527be550);
+}
+
+@font-face {
+  font-family: SourceSansPro Regular;
+  src: url(/fonts/SourceSansPro-Regular.ttf?906ba80ac81b0bb01b7b2fda686c785d);
+}
+
+@font-face {
+  font-family: SourceSansPro Light;
+  src: url(/fonts/SourceSansPro-Light.ttf?e7daa4ab63e5209eedac1adcb98a7fed);
+}
+
+body {
+  background: #DEDEDE;
+  color: #212121;
+  font-family: SourceSansPro Regular;
+  position: relative;
+}
+
+body div:first-of-type .blue_circle {
+  background: #92DEFB;
+  border-radius: 50%;
+  width: 800px;
+  height: 800px;
+  overflow-x: hidden;
+  position: absolute;
+  top: -5%;
+  left: -20%;
+  z-index: -1;
+}
+
+body img:first-of-type {
+  width: 7%;
+  margin: 10px 0 30px 10px;
+}
+
+body nav {
+  display: flex;
+  margin: -7% 50% 0 50%;
+}
+
+body div:first-of-type .content {
+  border-radius: 45px;
+  background-color: #F5FFFF;
+  width: 1400px;
+  height: 615px;
+  opacity: 0.99;
+  margin: 2% auto;
+  display: flex;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+body div:first-of-type .content div:first-of-type p:first-of-type {
+  font-family: SourceSansPro Bold;
+  font-size: 4em;
+  margin: 15% 18% 5% 10%;
+}
+
+body div:first-of-type .content div:first-of-type .detail {
+  color: #8347B8;
+  font-family: SourceSansPro Semibold;
+  font-size: 2em;
+  margin: 1% 10% 0%;
+}
+
+body div:first-of-type .content div:first-of-type .button {
+  background-image: linear-gradient(left, #6B14EF, #8347B8);
+  background: linear-gradient(to right, #6B14EF, #834788);
+  border-radius: 55px;
+  width: 200px;
+  height: 60px;
+  color: #FFF6E5;
+  font-family: SourceSansPro Semibold;
+  border: none;
+  font-size: 2em;
+  margin: 5% 30%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+body div:first-of-type .content div:nth-of-type(2) p {
+  font-family: SourceSansPro Black;
+  font-size: 2.5em;
+}
+
