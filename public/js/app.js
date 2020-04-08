@@ -29899,9 +29899,16 @@ __webpack_require__.r(__webpack_exports__);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').on('click', ' .more_button', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('#second_section').toggleClass('active');
-  }); //	$('body').on('click',' #close_button', (function(){
-  //	$('#second_section').toggleClass('active');
-  //}));
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').on('click', ' .close_button', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#second_section').toggleClass('active');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').on('click', ' .link_second_section', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#second_section').toggleClass('active');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').on('click', ' .link_first_section', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('#second_section').toggleClass('active');
+  });
 });
 
 /***/ }),

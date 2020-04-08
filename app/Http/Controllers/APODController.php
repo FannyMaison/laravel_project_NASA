@@ -25,21 +25,37 @@ class APODController extends Controller
 		  ),
 		));
 
-		$response = curl_exec($curl);
+		$response1 = curl_exec($curl);
 		$err = curl_error($curl);
-		//$response = json_decode($response);
+		$response = json_decode($response1, true);
+		
+
 
 		curl_close($curl);
 
 		if ($err) {
 		  echo "cURL Error #:" . $err;
 		} else {
-		  echo $response;
+		  //var_dump($response);
+			//$copyright = $response["copyright"];
+			$copyright = substr ($response["copyright"],0, strpos($response["copyright"], "Text:"));
+			$date = $response["date"];
+			$hdurl = $response["hdurl"];
+			$title = $response["title"];
+			$explanation = $response["explanation"];
 		}
-    	return view('welcome');
-    	//return view('welcome', ['response' => json.decode($response)]);
+    	//return view('welcome');
+    	//return view('welcome', ['response' => json_decode($response1, true)]);
+    	return view('welcome', [
+    		'copyright' => $copyright,
+    		'date' => $date,
+    		'title' => $title,
+    		'hdurl' => $hdurl,
+    		'explanation' => $explanation
+    	]);
     }
 
     //return view( view: 'welcome', ['response' => json.decode($response)]);
 
 }
+?>

@@ -15,11 +15,11 @@
     </head>
     <body>
         <header>
-            <img src="{{URL::asset('images/nasa_logo.png') }}">
+            <img src="{{URL::asset('images/nasa_logo.png') }}" alt="Nasa's logo">
                 <nav>
-                    <p>APOD</p>
-                    <p>Details</p>
-                    <p>Contact</p>
+                    <a class="link_first_section">APOD</a>
+                    <a class="link_second_section">Details</a>
+                    <a href="#">Contact</a>
                 </nav>
         </header>
         <div class="des_routes">
@@ -38,27 +38,27 @@
             @endif
                 <div class="blue_circle"></div>
                 <section class="content" id="second_section">
-                    <img src="">
+                    <img src="{{URL::asset('images/cancel.png') }}" class="close_button" alt="close button">
+                    <img src="{{$hdurl}}" alt="astronomy picture of the day">
                     <div>
-                        <p>title</p>
-                        <p>description</p>
+                        <h3>{{$title}}</h3>
+                        <p>{{$explanation}}</p>
                     </div>
                 </section>
                 <section class="content" id="first_section">
                     <div class="detail_picture">
-                        <p>Astronomy picture of the day</p>
-                        <p class="detail">author : name</p>
-                        <p class="detail">date: 2020 02 21</p>
+                        <h2>Astronomy picture of the day</h2>
+                        <p class="detail">author : <span>{{$copyright}}</span></p> 
+                        <p class="detail">date: <span>{{$date}}</span></p>
                         <input type="button" name="show" value="learn more" class="more_button">
                     </div>
                    
                     <div>
-                        <img src="">
-                        <p>title</p>
+                        <img src="{{$hdurl}}" alt="astronomy picture of the day">
+                        <p>{{$title}}</p>
                     </div>
                 </section>
         </div>
     </body>
-    <script src="{{ asset('js/library/jquery.js')}}"></script>
     <script src="{{ asset('js/app.js')}}"></script>
 </html>

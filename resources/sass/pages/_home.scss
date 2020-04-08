@@ -4,26 +4,37 @@ body
 	color: $light_black;
 	font-family: SourceSansPro Regular;
 	position: relative;
+	overflow-x: hidden;
 	header
 	{
 		display: flex;
 		img:first-of-type
 		{
 			width: 7%;
-			margin: 10px 0 30px 10px;
+			margin: 15px 0 0 15px;
 		}
 	}
 	header nav
 	{
 		display:flex;
-		margin: 3% 0 0 10%;
+		margin: 40px 0 0 10%;
 		height: 10%;
-		font-family: SourceSansPro Semibold;
-		font-size: 1.5em;
 	}
-	nav p
+	nav a
 	{
 		margin: 0 75% 0 75%;
+		color: $light_black;
+		font-family: SourceSansPro Semibold;
+		text-decoration: none;
+		font-size: 1.5em;
+		cursor: pointer;
+
+		&:hover
+		{
+			color: $beige;
+			text-shadow: 1px 1px 10px black;
+		}
+
 	}
 	
 	div:first-of-type 
@@ -37,7 +48,7 @@ body
 			overflow-x: hidden;
 			position: absolute;
 			top: -5%;
-			left: -20%;
+			left: -25%;
 			z-index: -1;
 		}
 
@@ -51,31 +62,49 @@ body
 			margin: 0% auto;
 			display: flex;
 			box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-			div:first-of-type p:first-of-type
+			div:first-of-type h2
 			{
 				font-family: SourceSansPro Bold;
 				font-size: 4em;
 				margin: 15% 18% 5% 10%;
 			}
-			div:first-of-type .detail
+			div:first-of-type
 			{
-				color: $purple;
-				font-family: SourceSansPro Semibold;
-				font-size: 2em;
-				margin: 1% 10% 0%;
+				width: 694px;
+				.detail
+				{
+					color: $blue_purple;
+					font-family: SourceSansPro Semibold;
+					font-size: 2em;
+					margin: 1% 10% 0%;
+
+					span
+					{
+						color: $purple;
+						font-family: SourceSansPro Light;
+						text-shadow: 1px 1px 5px black;
+					}
+				}
+				.more_button
+				{
+					background-image: linear-gradient(left, $blue_purple, $purple);
+					background: linear-gradient(to right, #6B14EF, #834788);
+					border-radius: 55px;
+					width: 200px;
+					height: 60px;
+					color: $beige;
+					font-family: SourceSansPro Semibold;
+					border: none;
+					font-size: 2em;
+					margin: 5% 30%;
+					box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+					cursor: pointer;
+				}
 			}
-			div:first-of-type .more_button
+			div:nth-of-type(2) img
 			{
-				background-image: linear-gradient(left, $blue_purple, $purple);
-				background: linear-gradient(to right, #6B14EF, #834788);
-				border-radius: 55px;
-				width: 200px;
-				height: 60px;
-				color: $beige;
-				font-family: SourceSansPro Semibold;
-				border: none;
-				font-size: 2em;
-				margin: 5% 30%;
+				height: 500px;
+				margin: 4% 0 auto -3%;
 				box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 			}
 			div:nth-of-type(2) p

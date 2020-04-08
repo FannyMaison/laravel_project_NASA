@@ -162,32 +162,6 @@ table {
   src: url(/fonts/SourceSansPro-Light.ttf?e7daa4ab63e5209eedac1adcb98a7fed);
 }
 
-/*section:nth-of-type(2)
-{
-	z-index : 10; //permet de positionner le bloc au-dessus de TOUS les éléments
-	transform : translateX(+100%); //permet de cacher le bloc à droite de la fin de page
-	transition : transform 2s ease; //indque le temps de la fonction
-	position: absolute;
-
-	div p:first-of-type
-		{
-			font-family: SourceSansPro Black;
-			font-size: 2.5em;
-		}
-	div p:nth-of-type(2)
-		{
-			font-family: SourceSansPro Regular;
-			font-size: 1em;
-			height: 710px;
-			width: 686px;
-		}
-}
-
-section:nth-of-type(2).active
-{
-	transform : translateX(0%);
-}*/
-
 section#second_section {
   z-index: 10;
   /*permet de positionner le bloc au-dessus de TOUS les éléments*/
@@ -195,11 +169,30 @@ section#second_section {
   transition: transform 2s ease;
   /*indque le temps de la fonction*/
   position: absolute;
+  padding: 0% 3% 0% 0%;
 }
 
-section#second_section div p:first-of-type {
+section#second_section img:first-of-type {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  margin: 10px 0% 0% 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+section#second_section img:nth-of-type(2) {
+  width: 100%;
+  padding: 4% 4% 4% 0%;
+  margin: 0% 0px 0 -2%;
+}
+
+section#second_section div h3 {
   font-family: SourceSansPro Black;
   font-size: 2.5em;
+  text-align: center;
+  margin: 10% auto 5%;
 }
 
 section#second_section div p:nth-of-type(2) {
@@ -218,6 +211,7 @@ body {
   color: #212121;
   font-family: SourceSansPro Regular;
   position: relative;
+  overflow-x: hidden;
 }
 
 body header {
@@ -226,19 +220,27 @@ body header {
 
 body header img:first-of-type {
   width: 7%;
-  margin: 10px 0 30px 10px;
+  margin: 15px 0 0 15px;
 }
 
 body header nav {
   display: flex;
-  margin: 3% 0 0 10%;
+  margin: 40px 0 0 10%;
   height: 10%;
-  font-family: SourceSansPro Semibold;
-  font-size: 1.5em;
 }
 
-body nav p {
+body nav a {
   margin: 0 75% 0 75%;
+  color: #212121;
+  font-family: SourceSansPro Semibold;
+  text-decoration: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+body nav a:hover {
+  color: #FFF6E5;
+  text-shadow: 1px 1px 10px black;
 }
 
 body div:first-of-type .blue_circle {
@@ -249,7 +251,7 @@ body div:first-of-type .blue_circle {
   overflow-x: hidden;
   position: absolute;
   top: -5%;
-  left: -20%;
+  left: -25%;
   z-index: -1;
 }
 
@@ -264,17 +266,27 @@ body div:first-of-type .content {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-body div:first-of-type .content div:first-of-type p:first-of-type {
+body div:first-of-type .content div:first-of-type h2 {
   font-family: SourceSansPro Bold;
   font-size: 4em;
   margin: 15% 18% 5% 10%;
 }
 
+body div:first-of-type .content div:first-of-type {
+  width: 694px;
+}
+
 body div:first-of-type .content div:first-of-type .detail {
-  color: #8347B8;
+  color: #6B14EF;
   font-family: SourceSansPro Semibold;
   font-size: 2em;
   margin: 1% 10% 0%;
+}
+
+body div:first-of-type .content div:first-of-type .detail span {
+  color: #8347B8;
+  font-family: SourceSansPro Light;
+  text-shadow: 1px 1px 5px black;
 }
 
 body div:first-of-type .content div:first-of-type .more_button {
@@ -288,6 +300,13 @@ body div:first-of-type .content div:first-of-type .more_button {
   border: none;
   font-size: 2em;
   margin: 5% 30%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+body div:first-of-type .content div:nth-of-type(2) img {
+  height: 500px;
+  margin: 4% 0 auto -3%;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
 
