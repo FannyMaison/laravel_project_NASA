@@ -15,16 +15,26 @@ class SMDBController extends Controller
 
     public function insert(Request $request) {
         $smallbody = new SmallBody;
-        $smallbody->name = $request->input('name');
-        $smallbody->planet = $request->input('planet');
-        $smallbody->kind = $request->input('kind');
-        $smallbody->distance = $request->input('distance');
-        $smallbody->class = $request->input('class');
+        try {
+            $smallbody->name = $request->input('name');
+            $smallbody->planet = $request->input('planet');
+            $smallbody->kind = $request->input('kind');
+            $smallbody->distance = $request->input('distance');
+            $smallbody->class = $request->input('class');
 
-        $smallbody->save();
-        //dd($smallbody);
-        $smallbodies = \App\SmallBody::all();
-        return view('SBdatabase', ['smallbodies' => $smallbodies]);
+            $smallbody->save();
+            //dd($smallbody);
+            $smallbodies = \App\SmallBody::all();
+            return view('SBdatabase', ['smallbodies' => $smallbodies]);
+        }
+        catch(\Exception $e){
+            // do task when error
+            //echo $e->getMessage();   // insert query
+            $smallbodies = \App\SmallBody::all();
+            //$smallbody->showDBerror = 'smallbodies-insert failure'; 
+            return view('SBdatabase', ['smallbodies' => $smallbodies]);
+        }
+        
     }
 
     /*public function update() {

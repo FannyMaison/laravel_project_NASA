@@ -37,8 +37,11 @@ class APODController extends Controller
 		  echo "cURL Error #:" . $err;
 		} else {
 		  //var_dump($response);
-			//$copyright = $response["copyright"];
-			$copyright = substr ($response["copyright"],0, strpos($response["copyright"], "Text:"));
+			$copyright = $response["copyright"];
+			$breakpoint = strpos($response["copyright"], "Text:");
+			if ($breakpoint > 0) {
+				$copyright = substr ($response["copyright"],0, $breakpoint);			
+			}
 			$date = $response["date"];
 			$hdurl = $response["hdurl"];
 			$title = $response["title"];

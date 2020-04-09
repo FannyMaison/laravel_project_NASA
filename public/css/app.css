@@ -58,14 +58,11 @@ fieldset,
 form,
 label,
 legend,
-table,
 caption,
 tbody,
 tfoot,
 thead,
 tr,
-th,
-td,
 article,
 aside,
 canvas,
@@ -314,5 +311,96 @@ body div:first-of-type .content div:nth-of-type(2) img {
 body div:first-of-type .content div:nth-of-type(2) p {
   font-family: SourceSansPro Black;
   font-size: 2.5em;
+}
+
+section.content div h2 {
+  font-family: SourceSansPro Bold;
+  font-size: 4em;
+  margin: 15% 18% 5% 10%;
+}
+
+section.content div form {
+  margin: 0% 10% 0%;
+  width: 320px;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  background-color: rgba(255, 246, 229, 0.3);
+}
+
+section.content div label {
+  /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+  color: #92DEFB;
+  font-family: SourceSansPro Semibold;
+}
+
+section.content div input {
+  width: 181px;
+  box-sizing: border-box;
+  /* Pour harmoniser le look & feel des bordures des champs texte */
+  border: 1px solid #999;
+  margin-bottom: 10px;
+}
+
+section.content div input:focus {
+  /* Pour souligner légèrement les éléments actifs */
+  border-color: #000;
+}
+
+section.content div button {
+  margin-left: 90px;
+  background: linear-gradient(to right, #6B14EF, #834788);
+  border-radius: 55px;
+  width: 150px;
+  height: 30px;
+  color: #FFF6E5;
+  font-family: SourceSansPro Semibold;
+  border: none;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+section.content div:nth-of-type(2) h3 {
+  font-family: SourceSansPro Black;
+  font-size: 2.5em;
+  text-align: center;
+  margin: 5% auto 5%;
+}
+
+section.content div:nth-of-type(2) table {
+  width: 100%;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  /*height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 250px 191px 191px;*/
+}
+
+section.content div:nth-of-type(2) table th {
+  font-size: 1.5em;
+  color: #6B14EF;
+  font-family: SourceSansPro Semibold;
+  width: 110px;
+  padding: 0 1% 0 1%;
+}
+
+section.content div:nth-of-type(2) table th:first-of-type {
+  width: 6%;
+}
+
+section.content div:nth-of-type(2) table th:nth-of-type(6n+6) {
+  width: 15%;
+}
+
+section.content div:nth-of-type(2) table td {
+  font-size: 1.5em;
+  color: #8347B8;
+  font-family: SourceSansPro Light;
+  text-shadow: 1px 1px 5px black;
+  text-align: center;
 }
 

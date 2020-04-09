@@ -19,9 +19,9 @@ class CreateSmallbodiesTable extends Migration
             $table->string('name');
             $table->string('planet');
             $table->string('kind');
-            $table->float('distance');
-            $table->string('class');
-            //$table->unique( array('name','distance') );
+            $table->float('distance')->nullable();
+            $table->string('class')->nullable();
+            $table->unique( array('name','planet') );
         });
     }
 

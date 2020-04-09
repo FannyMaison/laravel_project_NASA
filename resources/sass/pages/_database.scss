@@ -1,0 +1,110 @@
+section.content
+{
+	div 
+	{
+		h2
+		{
+			font-family: SourceSansPro Bold;
+			font-size: 4em;
+			margin: 15% 18% 5% 10%;
+		}
+		form
+		{
+			margin: 0% 10% 0%;
+			width: 320px;
+			padding: 1em;
+			border: 1px solid #CCC;
+  			border-radius: 1em;
+  			background-color: rgba($beige, 0.3);
+		}
+		label 
+		{
+			/* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+			display: inline-block;
+			width: 80px;
+			text-align: right;
+			color: $light_blue;
+			font-family: SourceSansPro Semibold;
+		}
+		input
+		{
+			width: 181px;
+			box-sizing: border-box;
+			/* Pour harmoniser le look & feel des bordures des champs texte */
+			border: 1px solid #999;
+			margin-bottom: 10px;
+
+			&:focus
+			{
+				/* Pour souligner légèrement les éléments actifs */
+				border-color: #000;
+			}
+		}
+		button
+		{
+			margin-left: 90px;
+			//background-image: linear-gradient(left, $blue_purple, $purple);
+			background: linear-gradient(to right, #6B14EF, #834788);
+			border-radius: 55px;
+			width: 150px;
+			height: 30px;
+			color: $beige;
+			font-family: SourceSansPro Semibold;
+			border: none;
+			box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+		}
+	}
+
+	div:nth-of-type(2)
+	{
+		h3
+		{
+			font-family: SourceSansPro Black;
+			font-size: 2.5em;
+			text-align: center;
+			margin: 5% auto 5%;
+		}
+		table
+		{
+			width: 100%;
+			border: 1px solid #CCC;
+  			border-radius: 1em;
+			/*height: 80%;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: 250px 191px 191px;*/
+			th
+			{
+				font-size: 1.5em;
+				color: $blue_purple;
+				font-family: SourceSansPro Semibold;
+				width: 110px;
+				padding: 0 1% 0 1%;
+				&:first-of-type
+				{
+					width: 6%;
+				}
+				&:nth-of-type(6n+6)
+				{
+					width: 15%;
+				}
+			}
+
+			
+			td
+			{
+				font-size: 1.5em;
+				color: $purple;
+				font-family: SourceSansPro Light;
+				text-shadow: 1px 1px 5px black;
+				text-align: center;
+			}
+		}
+		table, th, td
+		{
+			//border: 1px;
+		} 
+		
+	}
+}

@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class SmallBody extends Model
 {
     protected $table = 'smallbodies';
-    protected $fillable = ['name', 'planet', 'kind', 'distance', 'class'];
+    protected $fillable = ['id', 'name', 'planet', 'kind', 'distance', 'class'];
 }
