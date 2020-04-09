@@ -220,6 +220,7 @@ body header {
 
 body header img:first-of-type {
   width: 7%;
+  height: 7%;
   margin: 15px 0 0 15px;
 }
 

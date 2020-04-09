@@ -55,7 +55,5 @@ class APODController extends Controller
     	]);
     }
 
-    //return view( view: 'welcome', ['response' => json.decode($response)]);
-
 }
 ?>
