@@ -13,6 +13,12 @@ class SMDBController extends Controller
     	return view('SBdatabase', ['smallbodies' => $smallbodies]);
     }
 
+    public function indexUpdate() {
+        $smallbody = \App\SmallBody::all(); //prend tout ce qu'il y a dans le model SmallBody
+        //$smallbody = \App\SmallBody::find(7); //prend tout ce qu'il y a dans le model SmallBody
+       return view('SBdatabaseEdit', ['smallbodies' => $smallbody]);
+    }
+
     public function insert(Request $request) {
         $smallbody = new SmallBody;
         try {
@@ -37,15 +43,25 @@ class SMDBController extends Controller
         
     }
 
-    /*public function update() {
-        $smallbody = \App\SmallBody::find(1);
-        $smallbody->planet = 'Venus';
-        $smallbody->save();
+    public function update(Request $request, $id) {
+        $smallbody = \App\SmallBody::find($id);
+        $smallbody->name = $request->input('rename');
+        $smallbody->planet = $request->input('replanet');
+        $smallbody->kind = $request->input('rekind');
+        $smallbody->distance = $request->input('redistance');
+        $smallbody->class = $request->input('reclass');
+        $smallbody->update();
+
         //dd($smallbody);
+        //$smallbodies = \App\SmallBody::all();
+        //return view('SBdatabase', ['smallbodies' => $smallbodies]);
+        return redirect()->action('SMDBController@index');
     }
 
-    public function delete() {
-        $smallbody = \App\SmallBody::find(3);
-        $smallbody->delete();
-    }*/
+    public function delete($id) {
+        $list = \App\SmallBody::find($id);
+        $list->delete();
+        $smallbodies = \App\SmallBody::all();
+        return view('SBdatabase', ['smallbodies' => $smallbodies]);
+    }
 }

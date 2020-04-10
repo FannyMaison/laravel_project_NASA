@@ -11,15 +11,17 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
+
 
 Route::get('/', 'APODController@index')->name('index');
 Route::get('/SBdatabase', 'SMDBController@index')->name('smallbodies');
 Route::post('/SBdatabase-insert', 'SMDBController@insert')->name('smallbodies-insert');
-//Route::get('/SBdatabase-update', 'SMDBController@update')->name('smallbodies-update');
-//Route::get('/SBdatabase-delete', 'SMDBController@delete')->name('smallbodies-delete');
+/*Route::get('/SBdatabaseEdit/{id}', function () {
+    return view('SBdatabaseEdit');
+});*/
+Route::get('/SBdatabaseEdit/{id}', 'SMDBController@indexUpdate');
+Route::post('/SBdatabaseEdit/{id}', 'SMDBController@update')->name('smallbodies-update');
+Route::get('/SBdatabase-delete/{id}', 'SMDBController@delete')->name('smallbodies-delete');
 
 
 /*

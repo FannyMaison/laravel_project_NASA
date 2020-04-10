@@ -15,14 +15,14 @@
     </head>
     <body>
         <header>
-            <img src="{{URL::asset('images/nasa_logo.png') }}" alt="Nasa's logo">
+            <a href="/"><img src="{{URL::asset('images/nasa_logo.png') }}" alt="Nasa's logo"></a>
                 <nav>
                     <a class="link_first_section"><abbr title="Astronomy Picture Of the Day">APOD</abbr></a>
                     <a class="link_second_section">Details</a>
-                    <a href=""><abbr title="Small-Body DataBase">SBDB</abbr></a>
+                    <a href="SBdatabase"><abbr title="Small-Body DataBase">SBDB</abbr></a>
                 </nav>
         </header>
-        <div class="des_routes">
+        <div class="some_routes">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth

@@ -21,7 +21,6 @@ h6,
 p,
 blockquote,
 pre,
-a,
 abbr,
 acronym,
 address,
@@ -215,10 +214,14 @@ body header {
   display: flex;
 }
 
-body header img:first-of-type {
-  width: 7%;
-  height: 7%;
+body header a {
   margin: 15px 0 0 15px;
+  width: 7%;
+  height: 65px;
+}
+
+body header a img:first-of-type {
+  width: 100%;
 }
 
 body header nav {
@@ -288,7 +291,6 @@ body div:first-of-type .content div:first-of-type .detail span {
 }
 
 body div:first-of-type .content div:first-of-type .more_button {
-  background-image: linear-gradient(left, #6B14EF, #8347B8);
   background: linear-gradient(to right, #6B14EF, #834788);
   border-radius: 55px;
   width: 200px;
@@ -313,31 +315,39 @@ body div:first-of-type .content div:nth-of-type(2) p {
   font-size: 2.5em;
 }
 
-section.content div h2 {
-  font-family: SourceSansPro Bold;
-  font-size: 4em;
-  margin: 15% 18% 5% 10%;
+section.content div:first-of-type {
+  width: 650px;
 }
 
-section.content div form {
-  margin: 0% 10% 0%;
+section.content div:first-of-type h2 {
+  font-family: SourceSansPro Bold;
+  font-size: 4em;
+  margin: 15% 0% 3% 10%;
+}
+
+section.content div:first-of-type form {
+  margin: 0% 0% 0% 10%;
   width: 320px;
   padding: 1em;
   border: 1px solid #CCC;
   border-radius: 1em;
   background-color: rgba(255, 246, 229, 0.3);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-section.content div label {
+section.content div:first-of-type label {
   /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
   display: inline-block;
   width: 80px;
   text-align: right;
   color: #92DEFB;
   font-family: SourceSansPro Semibold;
+  margin-right: 3%;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 0px #6B14EF;
 }
 
-section.content div input {
+section.content div:first-of-type input {
   width: 181px;
   box-sizing: border-box;
   /* Pour harmoniser le look & feel des bordures des champs texte */
@@ -345,22 +355,31 @@ section.content div input {
   margin-bottom: 10px;
 }
 
-section.content div input:focus {
+section.content div:first-of-type input:focus {
   /* Pour souligner légèrement les éléments actifs */
   border-color: #000;
 }
 
-section.content div button {
-  margin-left: 90px;
+section.content div:first-of-type a {
+  margin-left: 15%;
+}
+
+section.content div:first-of-type button {
+  margin: 15px 0 0 75px;
   background: linear-gradient(to right, #6B14EF, #834788);
   border-radius: 55px;
-  width: 150px;
-  height: 30px;
+  width: 175px;
+  height: 35px;
   color: #FFF6E5;
   font-family: SourceSansPro Semibold;
   border: none;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  font-size: 1.1em;
+}
+
+section.content div:nth-of-type(2) {
+  margin-left: -7%;
 }
 
 section.content div:nth-of-type(2) h3 {
@@ -392,8 +411,8 @@ section.content div:nth-of-type(2) table th:first-of-type {
   width: 6%;
 }
 
-section.content div:nth-of-type(2) table th:nth-of-type(6n+6) {
-  width: 15%;
+section.content div:nth-of-type(2) table th:nth-of-type(7n+6) {
+  width: 10%;
 }
 
 section.content div:nth-of-type(2) table td {
@@ -402,5 +421,23 @@ section.content div:nth-of-type(2) table td {
   font-family: SourceSansPro Light;
   text-shadow: 1px 1px 5px black;
   text-align: center;
+}
+
+section.content div:nth-of-type(2) table td:nth-of-type(7n+7) {
+  width: 210px;
+  display: flex;
+  justify-content: space-between;
+  margin: 1%;
+  border: none;
+}
+
+section.content div:nth-of-type(2) table td a {
+  text-decoration: none;
+  background: linear-gradient(to right, #6B14EF, #834788);
+  border-radius: 55px;
+  color: #FFF6E5;
+  text-shadow: none;
+  font-family: SourceSansPro Semibold;
+  width: 100px;
 }
 
