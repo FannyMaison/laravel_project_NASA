@@ -18,7 +18,6 @@
             <a href="/"><img src="{{URL::asset('images/nasa_logo.png') }}" alt="Nasa's logo"></a>
                 <nav>
                     <a class="link_first_section"><abbr title="Astronomy Picture Of the Day">APOD</abbr></a>
-                    <a class="link_second_section">Details</a>
                     <a href="SBdatabase"><abbr title="Small-Body DataBase">SBDB</abbr></a>
                 </nav>
         </header>
@@ -38,7 +37,7 @@
             @endif
                 <div class="blue_circle"></div>
                 <section class="content" id="second_section">
-                    <img src="{{URL::asset('images/cancel.png') }}" class="close_button" alt="close button">
+                    <img src="{{URL::asset('images/arrow_right.png') }}" class="return_button" alt="return button">
                     <img src="{{$hdurl}}" alt="astronomy picture of the day">
                     <div>
                         <h3>{{$title}}</h3>
@@ -47,7 +46,7 @@
                 </section>
                 <section class="content" id="first_section">
                     <div class="detail_picture">
-                        <h2>Astronomy picture of the day</h2>
+                        <h2>Astronomy picture<br>of the day</h2>
                         <p class="detail">author : <span>{{$copyright}}</span></p> 
                         <p class="detail">date: <span>{{$date}}</span></p>
                         <input type="button" name="show" value="learn more" class="more_button">

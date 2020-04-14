@@ -13,10 +13,14 @@ class SMDBController extends Controller
     	return view('SBdatabase', ['smallbodies' => $smallbodies]);
     }
 
-    public function indexUpdate() {
-        $smallbody = \App\SmallBody::all(); //prend tout ce qu'il y a dans le model SmallBody
-        //$smallbody = \App\SmallBody::find(7); //prend tout ce qu'il y a dans le model SmallBody
-       return view('SBdatabaseEdit', ['smallbodies' => $smallbody]);
+    public function indexUpdate($id) {
+        $smallbody = \App\SmallBody::find($id);
+        $nameU = $smallbody->name;
+        $planetU = $smallbody->planet;
+        $kindU = $smallbody->kind;
+        $distanceU = $smallbody->distance;
+        $classU = $smallbody->class;
+       return view('SBdatabaseEdit', ['idU'=> $id, 'nameU'=> $nameU, 'planetU'=> $planetU, 'kindU'=> $kindU, 'distanceU'=> $distanceU, 'classU'=> $classU]);
     }
 
     public function insert(Request $request) {
@@ -32,13 +36,15 @@ class SMDBController extends Controller
             //dd($smallbody);
             $smallbodies = \App\SmallBody::all();
             return view('SBdatabase', ['smallbodies' => $smallbodies]);
+
         }
         catch(\Exception $e){
             // do task when error
             //echo $e->getMessage();   // insert query
+            //$smallbody->showDBerror = 'smallbodies-insert failure';
             $smallbodies = \App\SmallBody::all();
-            //$smallbody->showDBerror = 'smallbodies-insert failure'; 
             return view('SBdatabase', ['smallbodies' => $smallbodies]);
+            return back()->with( 'alert', $e->getMessage());
         }
         
     }

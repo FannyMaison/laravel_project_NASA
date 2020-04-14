@@ -37,15 +37,46 @@ class APODController extends Controller
 		  echo "cURL Error #:" . $err;
 		} else {
 		  //var_dump($response);
-			$copyright = $response["copyright"];
-			$breakpoint = strpos($response["copyright"], "Text:");
-			if ($breakpoint > 0) {
-				$copyright = substr ($response["copyright"],0, $breakpoint);			
+			if (isset($response["copyright"]))
+			{
+				$copyright = $response["copyright"];
+				$breakpoint = strpos($response["copyright"], "Text:");
+				if ($breakpoint > 0) {
+					$copyright = substr ($response["copyright"],0, $breakpoint);			
+				}
 			}
-			$date = $response["date"];
-			$hdurl = $response["hdurl"];
-			$title = $response["title"];
-			$explanation = $response["explanation"];
+			else {
+				$copyright = 'no copyright';
+			}
+
+			if (isset($response["date"])) {
+				$date = $response["date"];
+			}
+			else {
+				$date = 'no date';
+			}
+
+			if (isset($response["hdurl"])) {
+				$hdurl = $response["hdurl"];
+			}
+			else {
+				$hdurl = 'no image';
+			}
+			
+			if (isset($response["title"])) {
+				$title = $response["title"];
+			}
+			else {
+				$title = 'no title';
+			}
+			
+			if (isset($response["explanation"])) {
+				$explanation = $response["explanation"];
+			}
+			else {
+				$explanation = 'no explanation';
+			}
+			
 		}
     	//return view('welcome');
     	//return view('welcome', ['response' => json_decode($response1, true)]);

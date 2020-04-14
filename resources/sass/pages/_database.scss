@@ -51,7 +51,7 @@ section.content
 		}
 		button
 		{
-			margin: 15px 0 0 75px;
+			margin: 15px 72px 0;
 			//background-image: linear-gradient(left, $blue_purple, $purple);
 			background: linear-gradient(to right, #6B14EF, #834788);
 			border-radius: 55px;
@@ -95,10 +95,6 @@ section.content
 				&:first-of-type
 				{
 					width: 6%;
-				}
-				&:nth-of-type(7n+6)
-				{
-					width: 10%;
 				}
 			}
 

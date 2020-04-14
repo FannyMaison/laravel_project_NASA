@@ -5,17 +5,13 @@ section#second_section
 	transform: translateX(+1600px);
 	transition : transform 2s ease; /*indque le temps de la fonction*/
 	position: absolute;
-	//padding: 2% 2% 0% 2%;
-	padding: 0% 3% 0% 0%;
 
 	img:first-of-type
 	{
 		width: 50px;
 		height: 50px;
-		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-		border-radius: 50%;
-		//margin: 1% 1%;
-		//margin: -20px 0% 0% -20px;
+		//box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+		//border-radius: 50%;
 		margin: 10px 0% 0% 15px;
 		cursor: pointer;
 		z-index: 1;
@@ -45,5 +41,5 @@ section#second_section
 
 section#second_section.active
 {
-	transform : translateX(92px);
+	transform : translateX(69px);
 }

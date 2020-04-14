@@ -24,12 +24,14 @@ body
 	header nav
 	{
 		display:flex;
-		margin: 40px 0 0 10%;
+		margin: 40px 50% 0 auto;
 		height: 10%;
+		justify-content: center;
+    	width: 200px;
 	}
 	nav a
 	{
-		margin: 0 75% 0 75%;
+		margin: 0 110% 0 110%;
 		color: $light_black;
 		font-family: SourceSansPro Semibold;
 		text-decoration: none;
@@ -42,6 +44,10 @@ body
 			text-shadow: 1px 1px 10px black;
 		}
 
+	}
+	nav a.link_first_section
+	{
+		text-shadow: 1px 1px 0px $light_blue;
 	}
 	
 	div:first-of-type 
@@ -69,11 +75,12 @@ body
 			margin: 0% auto;
 			display: flex;
 			box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+			padding: 0 3% 0 0;
 			div:first-of-type h2
 			{
 				font-family: SourceSansPro Bold;
 				font-size: 4em;
-				margin: 15% 18% 5% 10%;
+				margin: 13% 0% 5% 10%;
 			}
 			div:first-of-type
 			{
@@ -108,16 +115,20 @@ body
 					cursor: pointer;
 				}
 			}
-			div:nth-of-type(2) img
+			div:nth-of-type(2)
 			{
-				height: 500px;
-				margin: 4% 0 auto -3%;
-				box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-			}
-			div:nth-of-type(2) p
-			{
-				font-family: SourceSansPro Black;
-				font-size: 2.5em;
+				margin: 0;
+				img
+				{
+					height: 500px;
+					margin: 4% 0 auto auto;
+					box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+				}
+				p
+				{
+					font-family: SourceSansPro Black;
+					font-size: 2.1em;
+				}
 			}
 		}
 	}

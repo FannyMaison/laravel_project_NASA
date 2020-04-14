@@ -165,14 +165,11 @@ section#second_section {
   transition: transform 2s ease;
   /*indque le temps de la fonction*/
   position: absolute;
-  padding: 0% 3% 0% 0%;
 }
 
 section#second_section img:first-of-type {
   width: 50px;
   height: 50px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
   margin: 10px 0% 0% 15px;
   cursor: pointer;
   z-index: 1;
@@ -199,7 +196,7 @@ section#second_section div p:nth-of-type(2) {
 }
 
 section#second_section.active {
-  transform: translateX(92px);
+  transform: translateX(69px);
 }
 
 body {
@@ -226,12 +223,14 @@ body header a img:first-of-type {
 
 body header nav {
   display: flex;
-  margin: 40px 0 0 10%;
+  margin: 40px 50% 0 auto;
   height: 10%;
+  justify-content: center;
+  width: 200px;
 }
 
 body nav a {
-  margin: 0 75% 0 75%;
+  margin: 0 110% 0 110%;
   color: #212121;
   font-family: SourceSansPro Semibold;
   text-decoration: none;
@@ -242,6 +241,10 @@ body nav a {
 body nav a:hover {
   color: #FFF6E5;
   text-shadow: 1px 1px 10px black;
+}
+
+body nav a.link_first_section {
+  text-shadow: 1px 1px 0px #92DEFB;
 }
 
 body div:first-of-type .blue_circle {
@@ -265,12 +268,13 @@ body div:first-of-type .content {
   margin: 0% auto;
   display: flex;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 0 3% 0 0;
 }
 
 body div:first-of-type .content div:first-of-type h2 {
   font-family: SourceSansPro Bold;
   font-size: 4em;
-  margin: 15% 18% 5% 10%;
+  margin: 13% 0% 5% 10%;
 }
 
 body div:first-of-type .content div:first-of-type {
@@ -304,15 +308,61 @@ body div:first-of-type .content div:first-of-type .more_button {
   cursor: pointer;
 }
 
+body div:first-of-type .content div:nth-of-type(2) {
+  margin: 0;
+}
+
 body div:first-of-type .content div:nth-of-type(2) img {
   height: 500px;
-  margin: 4% 0 auto -3%;
+  margin: 4% 0 auto auto;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 body div:first-of-type .content div:nth-of-type(2) p {
   font-family: SourceSansPro Black;
-  font-size: 2.5em;
+  font-size: 2.1em;
+}
+
+section div#edit {
+  display: flex;
+}
+
+section div#edit h2 {
+  margin: 13% 0% 5% 10%;
+  width: 404px;
+}
+
+section div#edit hr {
+  color: #F5FFFF;
+  border: none;
+  margin-right: 8%;
+}
+
+section div#edit form {
+  margin: 24% -20% 24% 0;
+  height: 41%;
+}
+
+section div#edit form div {
+  display: flex;
+}
+
+section div#edit form div .update_button {
+  width: 200px;
+  margin: 15px 56px 0;
+}
+
+section div#edit form div a:first-of-type {
+  margin: 13px 0 0 -40px;
+  height: 40px;
+}
+
+section div#edit form div a:first-of-type img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 }
 
 section.content div:first-of-type {
@@ -365,7 +415,7 @@ section.content div:first-of-type a {
 }
 
 section.content div:first-of-type button {
-  margin: 15px 0 0 75px;
+  margin: 15px 72px 0;
   background: linear-gradient(to right, #6B14EF, #834788);
   border-radius: 55px;
   width: 175px;
@@ -409,10 +459,6 @@ section.content div:nth-of-type(2) table th {
 
 section.content div:nth-of-type(2) table th:first-of-type {
   width: 6%;
-}
-
-section.content div:nth-of-type(2) table th:nth-of-type(7n+6) {
-  width: 10%;
 }
 
 section.content div:nth-of-type(2) table td {

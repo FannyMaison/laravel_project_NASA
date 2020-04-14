@@ -1,0 +1,47 @@
+section div#edit
+{
+	display: flex;
+	
+	h2
+	{
+		margin: 13% 0% 5% 10%;
+		width: 404px;
+	}
+	hr
+	{
+		color: $gray_blue;
+		border: none;
+		margin-right: 8%;
+	}
+	form
+	{
+		margin: 24% -20% 24% 0;
+		height: 41%;
+		
+		div
+		{
+			display: flex;
+			.update_button
+			{
+				width: 200px;
+				margin: 15px 56px 0;
+			}
+			a:first-of-type
+			{
+				//margin-left: 0;
+				margin: 13px 0 0 -40px;
+				height: 40px;
+				img
+				{
+					width: 40px;
+					height: 40px;
+					cursor: pointer;
+					box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+					border-radius: 50%;
+				}
+			}
+		}
+		
+	}
+	
+}
