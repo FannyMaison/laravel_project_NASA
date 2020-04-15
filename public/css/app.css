@@ -323,6 +323,11 @@ body div:first-of-type .content div:nth-of-type(2) p {
   font-size: 2.1em;
 }
 
+body footer {
+  text-align: center;
+  margin-top: 1%;
+}
+
 section div#edit {
   display: flex;
 }
@@ -443,10 +448,6 @@ section.content div:nth-of-type(2) table {
   width: 100%;
   border: 1px solid #CCC;
   border-radius: 1em;
-  /*height: 80%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 250px 191px 191px;*/
 }
 
 section.content div:nth-of-type(2) table th {

@@ -41,27 +41,33 @@ class SMDBController extends Controller
         catch(\Exception $e){
             // do task when error
             //echo $e->getMessage();   // insert query
-            //$smallbody->showDBerror = 'smallbodies-insert failure';
-            $smallbodies = \App\SmallBody::all();
-            return view('SBdatabase', ['smallbodies' => $smallbodies]);
-            return back()->with( 'alert', $e->getMessage());
+            //$smallbodies = \App\SmallBody::all();
+            //return view('SBdatabase', ['smallbodies' => $smallbodies]);
+            return back()->with( 'alert', 'you are not doing it correctly, fill all necessary fields'/*$e->getMessage()*/);
         }
         
     }
 
     public function update(Request $request, $id) {
-        $smallbody = \App\SmallBody::find($id);
-        $smallbody->name = $request->input('rename');
-        $smallbody->planet = $request->input('replanet');
-        $smallbody->kind = $request->input('rekind');
-        $smallbody->distance = $request->input('redistance');
-        $smallbody->class = $request->input('reclass');
-        $smallbody->update();
+        try {
+            $smallbody = \App\SmallBody::find($id);
+            $smallbody->name = $request->input('rename');
+            $smallbody->planet = $request->input('replanet');
+            $smallbody->kind = $request->input('rekind');
+            $smallbody->distance = $request->input('redistance');
+            $smallbody->class = $request->input('reclass');
+            $smallbody->update();
 
-        //dd($smallbody);
-        //$smallbodies = \App\SmallBody::all();
-        //return view('SBdatabase', ['smallbodies' => $smallbodies]);
-        return redirect()->action('SMDBController@index');
+            //dd($smallbody);
+            //$smallbodies = \App\SmallBody::all();
+            //return view('SBdatabase', ['smallbodies' => $smallbodies]);
+            return redirect()->action('SMDBController@index');
+
+        } 
+        catch (\Exception $e) {
+            return redirect()->action('SMDBController@index')->with( 'alert', 'you are not doing it correctly, fill all necessary fields');
+        }
+        
     }
 
     public function delete($id) {

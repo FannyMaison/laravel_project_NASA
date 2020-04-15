@@ -68,5 +68,13 @@
                 </div>
             </section>
         </div>
+        <footer>Developed by Fanny Maison - 2020</footer>
     </body>
+    <script type="text/javascript">
+        var msg = '{{ Session::get('alert') }}';
+        var exist = '{{ Session::has('alert') }}';
+        if (exist) {
+            alert(msg);
+        }
+    </script>
 </html>

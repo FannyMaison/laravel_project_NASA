@@ -29903,10 +29903,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').on('click', ' .return_button', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('#second_section').toggleClass('active');
   });
-  /*$('body').on('click', ' .link_second_section', function(){
-  	$('#second_section').toggleClass('active');
-  });*/
-
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').on('click', ' .link_first_section', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('#second_section').toggleClass('active');
   });

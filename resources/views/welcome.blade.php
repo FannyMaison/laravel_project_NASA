@@ -58,6 +58,7 @@
                     </div>
                 </section>
         </div>
+        <footer>Developed by Fanny Maison - 2020</footer>
     </body>
     <script src="{{ asset('js/app.js')}}"></script>
 </html>
